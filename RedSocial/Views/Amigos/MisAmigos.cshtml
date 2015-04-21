@@ -1,14 +1,14 @@
-﻿@model IEnumerable<RedSocialWebApi.Models.Amigos>
+﻿@model IEnumerable<RedSocialWebApi.Models.Usuario>
 @{
     Layout = null;
 }
 
-
+@Html.Partial("NuevoAmigo")
 @foreach (var item in Model)
 {
 
     <div>
-        @item.Usuario1.nombre @item.Usuario1.apellidos;
+        @item.nombre @item.apellidos;
     </div>
 
 }

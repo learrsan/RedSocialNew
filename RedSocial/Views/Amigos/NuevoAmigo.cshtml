@@ -1,25 +1,38 @@
-﻿<input type="text" id="txtEmail" placeholder="email"/>
+﻿<input type="text" id="txtEmail" placeholder="email" />
 <button id="btnAdd" type="button">+</button>
 
 
 
 <script>
-    (function() {
-        var txt = $("#txtEmail").val();
+    (function () {
 
-        $.ajax({
-            url: "",
-            type: "POST",
-            dataType: "json",
-            contentType: "application/json",
-            data:txt,
-            success: function () {
-                location.reload();
-            },
-            error:function() {
-                alert("Algo ha fallado");
-            }
+        $("#btnAdd").bind("click", function () {
+
+            var txt = $("#txtEmail").val();
+
+            var obj = { txt: txt };
+
+            $.ajax({
+                url: "/amigos/AddAmigo",
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json",
+                data: JSON.stringify(obj),
+                success: function () {
+
+                    location.reload();
+
+                },
+                error: function () {
+
+                    alert("Algo ha fallado");
+
+                }
+            });
+
         });
+
+
 
 
     })();

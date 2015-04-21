@@ -10,8 +10,9 @@ namespace RedSocial.Controllers
 {
     public class AmigosController : Controller
     {
+       ServicioAmigos servicio = new ServicioAmigos("http://localhost:49924/api/Amigos");
         BaseServicios<Amigos> servicio = new BaseServicios<Amigos>
-               ("http://localhost:49322/api/Amigos"); 
+               ("http://localhost:49924/api/Amigos"); 
         // GET: Amigos
         public ActionResult MisAmigos()
         {

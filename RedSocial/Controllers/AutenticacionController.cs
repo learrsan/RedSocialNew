@@ -25,7 +25,7 @@ namespace RedSocial.Controllers
         public ActionResult Index(Usuario model)
         {
 
-            var srv = new BaseServicios<Usuario>("http://localhost:49322/api/Usuarios");
+            var srv = new BaseServicios<Usuario>("http://localhost:49924/api/Usuarios");
             var param = new Dictionary<String, Object>()
             {
                 {"login", model.login},
@@ -57,7 +57,7 @@ namespace RedSocial.Controllers
         [HttpPost]
         public async Task<ActionResult> Registro(Usuario model)
         {
-            var srv = new BaseServicios<Usuario>("http://localhost:49322/api/Usuarios");
+            var srv = new BaseServicios<Usuario>("http://localhost:49924/api/Usuarios");
 
             try
             {
