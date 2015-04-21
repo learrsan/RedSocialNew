@@ -1,0 +1,27 @@
+﻿<input type="text" id="txtEmail" placeholder="email"/>
+<button id="btnAdd" type="button">+</button>
+
+
+
+<script>
+    (function() {
+        var txt = $("#txtEmail").val();
+
+        $.ajax({
+            url: "",
+            type: "POST",
+            dataType: "json",
+            contentType: "application/json",
+            data:txt,
+            success: function () {
+                location.reload();
+            },
+            error:function() {
+                alert("Algo ha fallado");
+            }
+        });
+
+
+    })();
+
+</script>

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<RedSocialWebApi.Models.Amigos>
+@{
+    Layout = null;
+}
+
+
+@foreach (var item in Model)
+{
+
+    <div>
+        @item.Usuario1.nombre @item.Usuario1.apellidos;
+    </div>
+
+}
